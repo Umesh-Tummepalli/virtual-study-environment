@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url("https://images.unsplash.com/photo-1522199670076-2852f80289c3?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        .input{
+            padding: 10px 15px;
+            border-radius: 9999px;
+            border:none;
+            box-shadow: 0 0 5px;
+            min-width: 80%;
+        }
+        .login{
+            padding: 6px  15px;
+            box-shadow: 0 0 5px;
+            border-radius: 9999px;
+            border: none;
+            background-color:#000 ;
+            cursor: pointer;
+            color: white;
+        }
+        .mainDiv{
+            background-color: aliceblue;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width:300px;
+            min-height:250px;
+            justify-content:center;
+            align-items: center;
+        }
+        .error{
+            color: #cc0202;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mainDiv">
+        <span class="error">-check  your username and password-</span>
+
+        <input type="text" id="userName" placeholder="Enter your name"
+        class="input">
+
+        <input type="password" id="pass" placeholder="Enter password"
+        class="input">
+        <button class="login">
+            Log IN
+        </button>
+    </div>
+<script>
+    let userName=document.querySelector("#userName");
+let pass=document.querySelector("#pass");
+let login=document.querySelector(".login");
+let error=  document.querySelector(".error");
+let username="Umesh";
+let  password="12345";
+error.textContent="";
+login.addEventListener("click",()=>{
+    if(userName.value==username && pass.value==password){
+        login.innerHTML="logging in ....";
+        setTimeout(()=>{
+        window.location.href = 'main.html';
+        },1000)
+    }
+    else{
+        error.textContent="Invalid username or password";
+    }
+})
+</script>
+</body>
+</html>

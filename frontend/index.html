@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+<video src="bgVid/vid4.mp4"loop autoplay class="bg-video"></video>
+    <main>
+        <nav class="flex">
+            <div class="""><img src="" alt="">
+                <h1 class="" id="time">
+                    00:00:00
+                </h1></div>
+            <div class="flex btnss">
+             <div class="btns mute">
+               <i class="ri-volume-mute-fill"></i>
+            </div>
+            <div class="btns leftarr">
+               <i class="ri-arrow-left-s-fill"></i>
+           </div>
+             <div class="btns rightarr">
+                <i class="ri-arrow-right-s-fill"></i>
+            </div>
+             <div class="btns menuBtn">
+                <i class="ri-menu-fold-fill"></i>
+            </div>
+            </div>
+        </nav>
+       <section class="res">
+        <section class="timeClass flex">
+            <div id="stopwatch">00:00:00</div>
+              <div class="controls">
+                  <button id="playPause"><i class="ri-play-fill"></i></button>
+                  <button id="reset"><i class="ri-refresh-line"></i></button>
+              </div>
+          </section>
+          <section class="Dragel">
+              <div class="Drag flex">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+              </div>
+              <div class="todo">
+                <button class="addtaskBtn"> <i class="ri-add-circle-fill"></i></button>  
+                <div class="tasks">
+                 
+                </div>
+                <input type="text" class="taskInput" placeholder="Add Task">
+              </div>
+          </section>
+       </section>
+        
+        <div class="vidMenu">
+            <span class="closeBtn">+</span>
+            <p class="categs">Bg Videos</p> 
+            <div class="videos flex">
+                <video src="bgVid/vid1.mp4" class="video"></video>
+
+            </div>
+        </div>
+    </main>
+<script src="api.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+</body>
+</html>

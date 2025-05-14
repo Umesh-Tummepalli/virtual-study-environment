@@ -1,0 +1,9 @@
+# Ignore the bgVid folder and its contents
+./frontend/bgVid
+# Ignore the .vscode folder
+.vscode
+
+# Optional: Ignore all audio files (mp3, wav)
+*.mp4
+*.wav
+C:\Users\umesh\OneDrive\code\web dev\SRMproj\proj2\jababackend\run.md

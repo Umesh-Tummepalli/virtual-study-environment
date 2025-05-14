@@ -1,0 +1,379 @@
+.flex{
+    display: flex;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -10;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+body{
+    user-select: none;
+    background:transparent !important;
+    overflow-x: hidden;
+}
+.timeClass{
+    color:#fff;
+    background :#ffffff11;
+    padding: 10px;
+    position: absolute;
+    top:50%;
+    left:10%;
+    width: 25%;
+    height: 20%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#time{
+    font-size: 150%;
+    font-weight: 300;
+    color:#000;
+    color: #fff;
+    position: fixed;
+    top: 2%;
+    background-color: #000;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+.todo{
+    height:min(500px,30vh) ;
+    width: min(500px,50vw);
+    /* background-color:#bfc2cb8f; */
+    background-color:#222931;
+    padding: 10px;
+    cursor: auto;
+    backdrop-filter:blur(5px);
+    overflow: auto;
+}
+.Dragel{
+    backdrop-filter:blur(5px);
+    position: fixed;
+    border-radius: 10px;
+    background:transparent;
+    transform: translateY(-5%);
+    top: 30vh;
+    left:40vw;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 0 10px #000;
+    background-color: #ffffff8e;
+    overflow: hidden;
+    transition: 40ms linear ;
+    transform: scale(1.2);
+}
+.Drag{
+    cursor: grab;
+    width: 100%;
+    height: 20px;
+    gap: 5px;
+    padding-left: 15px;
+    align-items: center;
+    caret-color: red;
+
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: #fe6255;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.circle:nth-child(2){
+    background-color: #fbc22d;
+}
+
+.circle:nth-child(3){
+    background-color: #0dcd44;
+}
+.btns{
+    color: #fff;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 10px 10px #000;
+    cursor: pointer;
+    transition:all .4s;
+    border: 1px solid #000;
+    transform:perspective(1000px) rotate3d(1.5, 1, 0,50deg);
+    scale: 1.3;
+}
+nav{
+    padding: 15px;
+    justify-content: space-between;
+}
+.btnss{
+    gap: 20px;
+    /* box-shadow: 0 0 5px #000; */
+    padding: 5px;
+    border-radius: 5px;
+    background: transparent ;
+    transition: 1s;
+}
+.btns:hover{
+    /* color: #000;
+    background-color: #ffffffaf; */
+    z-index: 10;
+    transform:perspective(1000px) rotate3d(0, 1, 0,0deg);
+
+}
+.vidMenu{
+    background-color: #110202aa;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 95vh;
+    width: min(400px,50vw);
+    backdrop-filter: blur(5px);
+    padding: 15px 10px;
+    transform: translate(100%);
+    /* transition: .5s ease-out; */
+}
+.vidMenu span{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    transform: rotate(45deg);
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: .3s;
+    color: #fff;
+}
+.vidMenu span:hover{
+    color:rgb(196, 17, 17);
+}
+.vidMenu video{
+    width: 48%;
+    border-radius: 10px;
+    margin:5px 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+.videos{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.categs{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+}
+.vidMenu video:hover{
+    transform: scale(1.1);
+}
+
+.todo .addtaskBtn{
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px ;
+    padding: 3px;
+    transition: .3s;
+    cursor: pointer;
+    color: #fff;
+}
+.todo .addtaskBtn:hover{
+    color: #fff;
+    background-color: #666464d1;
+}
+.inputMain input{
+    border-radius: 9999px;
+    padding: 8px 14px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+.inputMain{
+    background-color: #222931;
+    padding: 6px 13px;
+    width: 90%;
+    border-radius: 9px;
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+    border: 2px solid #383e46;
+}
+.inputMain .delBtn{
+    /* background-color: red; */
+    color: white;
+}
+.todotext{
+    color: #fff;
+    padding: 4px 14px;
+    margin: 3px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border:2px solid #383e46;
+    border-radius: 10px;
+    align-items: center;
+}
+.delBtn{
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.892) !important;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px ;    
+    transition:.3s;
+}
+.delBtn:hover{
+    background-color: #0dcd44 !important;
+    /* color: #000; */
+    scale: 1.1;
+}
+.afteradd{
+    /* background-color:rgb(40, 44, 52) ; */
+    backdrop-filter: blur(10px);
+}
+.afteradd .todotext{
+    color: #fff;
+}
+#stopwatch{
+    font-size: 250%;
+    color: #000;
+
+}
+#playPause,#reset{
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .3s ease;
+}
+#playPause{
+    background-color: green;
+
+}
+#reset{
+    background-color: red;
+}
+#playPause:hover,#reset:hover{
+    background-color: #000;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    /* to set the width of the scroll bar */
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    /* this is to style the scroll bar */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    /* cursor: pointer; */
+  }
+
+@media only screen and (max-width: 800px) {
+    main{
+        overflow-x: hidden ;
+    }
+    .Dragel{
+        position: relative;
+        top: auto;
+        left: auto; 
+        width: 95%;
+        margin-right: 20px;
+        transform: scale(1);
+    }
+    .res{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 80vh;
+        padding: 10px;
+        z-index: 1000;
+        transition: .5s ease-out;
+        position: relative;
+        padding-top: 50px;
+        z-index: 0;
+    }
+    .todo{
+        width: 100%;
+        height: 50vh;
+    }
+    .timeClass{
+        position: relative;
+        width: 80%;
+        left: auto;
+        top: 6%;
+        flex-direction: row;
+        margin:0 auto;
+    }
+    .controls{
+        display: flex;
+        flex-direction: column;
+    }
+    #reset,#playPause{
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .vidMenu{
+        z-index: 999 ;
+        width: 100vw;
+        overflow-y: auto;
+    }
+    .videos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .videos video{
+        width: 90%;
+    }
+    .videos video:hover{
+        transform: scale(1);
+    }
+    .tickbtn{
+        background-color: #0dcd44;
+        color: #fff;
+        padding: 3px 7px ;
+        margin-left: 4px;
+        border-radius: 15px;
+        cursor: pointer;
+        border: none;
+    }
+}
+.doneBtn{
+    background-color:#0dcd44 !important;
+}
+.taskInput{
+    background-color: #222931;
+    padding: 6px 13px;
+    width: 90%;
+    border-radius: 9px;
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+    border: 2px solid #383e46;
+    caret-color: #fff;
+    color: #fff;
+}
