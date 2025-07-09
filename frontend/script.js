@@ -10,6 +10,7 @@ var mute=document.querySelector(".mute");
 var PlayPause=document.querySelector("#playPause");
 var i=0;
 
+// let arr=[]
 function padTime(num) {
   return num>9?num:`0${num}`
 }
